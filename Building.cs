@@ -31,4 +31,13 @@ public class Building
         _owner = nameOfBuyer;
     }
 
+    public void DisplayInfo()
+    {
+        Console.WriteLine($"\n{_address}");
+        Console.WriteLine("-------------");
+        Console.WriteLine($"Designed by {_designer}");
+        Console.WriteLine($"Constructed on {_dateConstructed}");
+        Console.WriteLine($"Owned by {_owner}");
+        Console.WriteLine($"{Volume} cubic meteres of space");
+    }
 }
