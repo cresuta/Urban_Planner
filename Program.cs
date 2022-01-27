@@ -2,7 +2,7 @@
 
 namespace UrbanPlanner
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -41,6 +41,19 @@ namespace UrbanPlanner
             b5.Construct();
             b5.Purchase("Michele");
             b5.DisplayInfo();
+
+            City megalopolis = new City("Megalopolis");
+            megalopolis.addBuilding(b1);
+            megalopolis.addBuilding(b2);
+            megalopolis.addBuilding(b3);
+            megalopolis.addBuilding(b4);
+            megalopolis.addBuilding(b5);
+            Console.WriteLine($"\nHere are the list of buildings in Megalopolis:");
+            Console.WriteLine("------------");
+            foreach (Building building in megalopolis.Buildings)
+            {
+                building.DisplayInfo();
+            }
         }
 
     }
